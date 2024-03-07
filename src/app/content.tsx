@@ -8,10 +8,10 @@ export const Content: FC<{}> = () => {
   const [runningB, startTransitionB] = useTransition();
 
   function runBoth() {
-    serverActionA();
-    serverActionB();
-    // startTransition(() => serverActionA());
-    // startTransitionB(() => serverActionB());
+    // serverActionA();
+    // serverActionB();
+    startTransition(() => serverActionA());
+    startTransitionB(() => serverActionB());
   }
 
   return (
